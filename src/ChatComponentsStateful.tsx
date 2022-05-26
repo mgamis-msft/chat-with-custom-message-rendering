@@ -21,7 +21,7 @@ function ChatComponents(): JSX.Element {
         <Stack
           verticalFill
           styles={{ root: { marginBottom: "10px" } }}
-          horizontalAlign="end"
+          horizontalAlign={messageProps.message.mine ? "end" : "start"}
         >
           <ChatMessageComponent mine={messageProps.message.mine}>
             {chatMessage.content}
